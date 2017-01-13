@@ -35,6 +35,11 @@ function init() {
 }
 
 
+<a href='//www.youtubeinmp3.com/fetch/?video=https://www.youtube.com/watch?v=i62Zjga8JOM' style='text-decoration:none;color:#03a730;'>
+  <img src='//www.youtubeinmp3.com/icon/download.png' style='vertical-align:middle;'> <strong>Download MP3</strong>
+</a>
+
+
 
 
 
@@ -94,7 +99,7 @@ function init() {
 
 
 
-      
+
 //beyond this point is my code, everything works///
 
 function makeRequest(q) {

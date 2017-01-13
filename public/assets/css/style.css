@@ -1,6 +1,30 @@
 
-#results{
+/*#results{
   position: absolute;
   height: 100vh;
   width: 100%;
+}
+
+.gmSearchButton{
+  position: absolute;
+  top: 0px;
+  background-color: black;
+  height: 50px;
+  width: 100px;
+}*/
+
+/*form { margin-top: 20px; }
+form, #results { padding: 0 20px; }
+.item { margin-bottom: 25px; }
+.w100 { width: 100%; }
+.btn-primary { background: #952b2b; border-color: #957575; }
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus { background: #782b2b;  border-color: #952b2b; }
+
+*/
+
+.gmDownloadButton{
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  color: white;
 }
