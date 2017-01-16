@@ -1,30 +1,153 @@
+body{
 
-/*#results{
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.gmSearchButton{
+a, a:hover, a:active, a:visited {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: BIGJOHN;
+    src:url('/assets/BIGJOHN.otf'),
+}
+
+@font-face {
+    font-family: GalanoBold;
+    src:url('/assets/GalanoBold.otf'),
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.gmFooter1{
   position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(241,241,243);
+}
+
+.gmMainContainer{
   top: 0px;
-  background-color: black;
-  height: 50px;
-  width: 100px;
-}*/
+  width: 70%;
+  right:30%;
+  height: 100%;
+  position: absolute;
+  z-index: -100;
+}
 
-/*form { margin-top: 20px; }
-form, #results { padding: 0 20px; }
-.item { margin-bottom: 25px; }
-.w100 { width: 100%; }
-.btn-primary { background: #952b2b; border-color: #957575; }
-.btn-primary:hover, .btn-primary:active, .btn-primary:focus { background: #782b2b;  border-color: #952b2b; }
+.rightSideContainer{
+  position: absolute;
+  /*background-color: red;*/
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+  width: 30%;
+  font-family: BIGJOHN;
+}
 
-*/
+.gmVideoHolder{
+  position: absolute;
+  top: 15%;
+  width: 79.3%;
+  height: 63%;
+  right: 0px;
+  margin-right: 10px;
+  background-color: blue;
+}
+
+.gmVideoOptions{
+  position: absolute;
+  height: 23%;
+  bottom: 0px;
+  width: 79.3%;
+  right: 0px;
+  margin-right: 10px;
+  /*background-color: blue;*/
+}
+.searchGM{
+  position: absolute;
+  height: 80px;
+  width: 640px;
+  /*background-color: black;*/
+  top: 0px;
+  right: 0px;
+  margin-right: 10px;
+
+}
+
+.gmQuery{
+   outline: none;
+   border: none;
+   border-color: transparent;
+   border-bottom:2px solid black;
+   width: 400px;
+}
+
+.gmMainSearchButton{
+  border-color: transparent;
+  color: black;
+  background-color: transparent;
+}
+.searchContainer{
+  margin-top: 20px;
+  position: absolute;
+  right: 3%;
+}
+
+.gmResults{
+  position: absolute;
+  top: 15%;
+  padding: 0px;
+}
+
+.gmThumbHolder{
+  position: relative;
+  padding: 0 5px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.gmThumbTitle{
+  float: right;
+}
 
 .gmDownloadButton{
   height: 50px;
   width: 100px;
-  background-color: black;
-  color: white;
+  background-color: rgb(17,20,27);
+  color: rgb(255,255,255);
+  border: 2px solid;
+}
+.gmDownloadButton:hover{
+  color: rgb(223,0,35);
+}
+
+.thumbImage{
+  position: relative;
+}
+
+.thumbDownloadButton{
+  height: 50px;
+  width: 100px;
+  background-color: rgb(17,20,27);
+  color: rgb(255,255,255);
+  border: 2px solid;
+}
+.gmDownload{
+  /*height: 50px;
+  width: 100px;*/
+  /*background-color: rgb(17,20,27);
+  color: rgb(255,255,255);
+  border: 2px solid;*/
+  font-weight: 900;
+  font-size: 1.3em;
+  font-family: 'GalanoBold';
+}
+
+.gmDownload:hover{
+  color: rgb(223,0,35);
 }

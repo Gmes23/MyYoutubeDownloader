@@ -1,18 +1,23 @@
-var file = fs.createWriteStream("file.jpg");
-var request = http.get("http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg", function(response) {
-  response.pipe(file);
-});
+
+
+
+//function when user clicks on a thumbnail it loads that thumbnails video into the videoholder
+function goThumbToVideo(d){
+  var thumbVidUrl= d.getAttribute("data-vid");
+
+  $('.gmVideoHolder').empty()
+  $('.gmVideoOptions').empty()
+  $('.gmVideoHolder').append('<iframe class="gmVideo" style="width:100%;height:100%" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/' + thumbVidUrl + '" >' + '</iframe>');
+  $('.gmVideoOptions').append('<div class="gmMainVidTitle">' + vidTitle +'</div>' + vidDownloadButton);
+
+
+}
 
 
 
 
 
-
-
-
-
-
-
+//make search request after clicking on search button
 function keyWordsearch(){
    gapi.client.setApiKey("AIzaSyD0YSEl2wfZp3a6dJFKIU6rWLLhSJYyRwo");
    gapi.client.load('youtube', 'v3', function() {
@@ -29,21 +34,27 @@ function keyWordsearch(){
    });
    request.execute(function(response)  {
            $('#results').empty()
-           $('#html5').empty()
+           $('.gmVideoHolder').empty()
+           $('.gmVideoOptions').empty()
            var srchItems = response.result.items;
            $.each(srchItems, function(index, item) {
            vidTitle = item.snippet.title;
-           vidTitle = item.snippet.title;
-           vidThumburl =  item.snippet.thumbnails.high.url;
+           vidThumbPicture =  item.snippet.thumbnails.high.url;
            vidURL = item.id.videoId;
            vidDownloadButton = '<a class="gmDownload" href="//www.youtubeinmp3.com/fetch/?video=https://www.youtube.com/watch?v='+ vidURL +'"> Download </a>';
-           vidThumbimg = '<pre><img id="thumb" src="'+vidThumburl+'" alt="No  Image Available." style="width:204px;height:128px"></pre>';
-           $('#results').append('<pre>' + vidTitle + vidThumbimg +  vidURL +'</pre>' + vidDownloadButton);
-           $('#html5').append('<iframe class="gmVideo" style="width:840px;height:660px" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/' + vidURL + '" >' + '</iframe>');
+           vidThumbimg = '<div class="gmThumbPhoto"><img id="thumb" class="thumbImage" src="'+vidThumbPicture +'" alt="No  Image Available." style="width:214.468085106px;height:120px"></div>';
+          //  vidURLHolder = '<div class="urlTouseonIframe" style="display:hidden;">' + vidURL + '</div>';
+
+           $('#results').append('<a id="thumbnailToVideo" class="thumbnailLoadsVideo" data-vid="'+ vidURL +'"  onclick="goThumbToVideo(this);">' + '<div class="gmThumbHolder">' + vidThumbimg + '<div class="gmThumbTitle" style="font-family:GalanoBold;">'+ vidTitle + '</div>' + '</a>' + '<div class="thumbDownloadButton">' + vidDownloadButton + '</div>' + '</div>');
+          //  $('.gmVideoOptions').append('<div class="gmMainVidTitle">' + vidTitle +'</div>' + vidDownloadButton);
+          //  $('.gmVideoHolder').append('<iframe class="gmVideo" style="width:100%;height:100%" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/' + vidURL + '" >' + '</iframe>');
 
    })
 })
 }
+
+
+
 
 
 
