@@ -38,6 +38,19 @@ a, a:hover, a:active, a:visited {
   height: 90%;
   bottom: 0px;
   right: 0px;
-  background-color: yellow;
+  /*background-color: yellow;*/
   overflow-y: scroll;
+}
+
+
+.gmThumnHolder{
+  height: 100px;
+  width: 100px;
+}
+
+
+.gmMainSearchButton{
+  position: absolute;
+  top: 0px;
+  z-index: 100;
 }

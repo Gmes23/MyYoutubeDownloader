@@ -5,9 +5,9 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var app = express();
 var routes = require('./controllers/controller.js');
-var path = require('path');
-var http = require('http');
-var fs = require('fs');
+// var path = require('path');
+// var http = require('http');
+// var fs = require('fs');
 var PORT = process.env.PORT || 3000;
 
 
